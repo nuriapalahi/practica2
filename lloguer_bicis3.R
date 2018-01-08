@@ -20,7 +20,7 @@ ggplot(train, aes(x = hour, y = count, colour = season)) +
   scale_x_discrete("hora") +
   scale_y_continuous("total") +
   theme_minimal() +
-  ggtitle("Gent lloga més bicis a la tardor que a la primavera.\n") + 
+  ggtitle("Gent lloga mÃ©s bicis a la tardor que a la primavera.\n") + 
   theme(plot.title=element_text(size=18))
 
 weather_summary <- ddply(train,.(weather,hour),
@@ -31,7 +31,7 @@ ggplot(train, aes(x = hour, y = count, colour = weather)) +
   scale_x_discrete("hora") +
   scale_y_continuous("total") +
   theme_minimal() +
-  ggtitle("Hi han més lloguer quan el temps es bo.\n") + 
+  ggtitle("Hi han mÃ©s lloguer quan el temps es bo.\n") + 
   theme(plot.title=element_text(size=18))
 
 
@@ -43,7 +43,7 @@ ggplot(train, aes(x = hour, y = count, colour = Weekday)) +
   scale_x_discrete("hora") +
   scale_y_continuous("total") +
   theme_minimal() +
-  ggtitle("Es lloguen més bicis als matins/vespres en dies laborables, i per dies sencers als caps de setmana\n")
+  ggtitle("Es lloguen mÃ©s bicis als matins/vespres en dies laborables, i per dies sencers als caps de setmana\n")
 
 
 weather_prob <- ddply(train,.(season, hour),
@@ -59,7 +59,7 @@ ggplot(train, aes(x = hour, y = Good, colour = season)) +
   scale_x_discrete("Hora") +
   scale_y_continuous("Bon temps") +
   theme_minimal() +
-  ggtitle("La possibilitat de bon temps és sempre alta. \n") + 
+  ggtitle("La possibilitat de bon temps Ã©s sempre alta. \n") + 
   theme(plot.title=element_text(size=18))
 
 ggplot(train, aes(x = hour, y = Normal, colour = season)) +
@@ -77,6 +77,9 @@ ggplot(train, aes(x = hour, y = Bad, colour = season)) +
   scale_x_discrete("Hour") +
   scale_y_continuous("Mal temps") +
   theme_minimal() +
-  ggtitle("La possibilitat de mal temps és major a l'estiu i hivern. \n") + 
+  ggtitle("La possibilitat de mal temps Ã©s major a l'estiu i hivern. \n") + 
   theme(plot.title=element_text(size=18))
 
+write.csv(weather_prob, file="weather_prob.csv",row.names=FALSE)
+
+write.csv(weather_summary, file="weather_summary.csv",row.names=FALSE)
