@@ -1,0 +1,12 @@
+Components del grup: Núria Palahí
+Fitxers train.csv & test.csv, camps:
+•	datetime: dia i hora
+•	season: camp numèric que indica hivern, primavera, tardor o estiu 
+•	holiday: camp binari que indica si és festiu 
+•	workingday: camp binari que indica si és laborable 
+•	weather: camp numeric que indica com ha estat el dia (1: Clear, Few clouds, Partly cloudy, Partly cloudy 2: Mist + Cloudy, Mist + Broken clouds, Mist + Few clouds, Mist 3: Light Snow, Light Rain + Thunderstorm + Scattered clouds, Light Rain + Scattered clouds 4: Heavy Rain + Ice Pallets + Thunderstorm + Mist, Snow + Fog) 
+•	temp: temperatura en C 
+•	atemp: temperatura de sensació 
+•	humidity: humitat 
+•	windspeed: velocitat del vent 
+•	count: total del lloguer (només a train)
